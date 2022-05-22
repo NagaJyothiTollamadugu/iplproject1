@@ -48,16 +48,16 @@ public class Scenario3and4{
 				}
 				else {
 					String []row = line.split(",");
-					for(int i=0;i<row.length;i++) {
+					
 						int yr = Integer.valueOf(row[1]);
 						String team =  row[10];
 						if(yr==2016)
 							ids2016.add(Integer.valueOf(row[0]));
 						if(yr==2015)
 							ids2015.add(Integer.valueOf(row[0]));
-					}
+					
 				}
-			}
+		}
 		
 			
 			
@@ -70,7 +70,7 @@ public class Scenario3and4{
 				}
 				else {
 					String []row = line.split(",");
-					for(int i=0;i<row.length;i++) {
+				
 						int matchId = Integer.valueOf(row[0]);
 						String team = row[2];
 						int idx = map.get(team)!=null?map.get(team):0;
@@ -85,7 +85,7 @@ public class Scenario3and4{
 							map1.put(bowler, idx1+1);
 							int idx2 = map2.get(bowler)!=null?map2.get(bowler):0;
 							map2.put(bowler, idx2+runs);
-						}
+						
 					}
 				}
 			}
